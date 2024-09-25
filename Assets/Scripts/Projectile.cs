@@ -18,4 +18,6 @@ public class Projectile : MonoBehaviour
         transform.Translate(Vector3.down * Time.deltaTime * 10);
         
     }
+
+
 }

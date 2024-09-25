@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.back * verticalInput * Time.deltaTime * 2);
 
         //Turn player left or right
-        transform.Rotate(Vector3.up * horizontalInput * Time.deltaTime * 200);
+        transform.Rotate(Vector3.up * horizontalInput * Time.deltaTime * 250);
 
         //Keep player on screen
         //left and right bounds
