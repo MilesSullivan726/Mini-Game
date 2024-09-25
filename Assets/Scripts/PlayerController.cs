@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour
 
         //fire projectile
         if (Input.GetKeyDown(KeyCode.Space)){
-            Instantiate(prefab, transform.position, prefab.transform.rotation);
+            Instantiate(prefab, transform.position, transform.localRotation);
+            
         }
     }
 }
