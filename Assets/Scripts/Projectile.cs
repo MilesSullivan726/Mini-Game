@@ -19,5 +19,17 @@ public class Projectile : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("triggered");
+        if (other.gameObject.tag == "Asteroid")
+        {
+            Debug.Log("Detected Projectile");
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            Debug.Log("Destroyed");
+        }
+
+    }
 
 }

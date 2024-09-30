@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7995102315984608136}
   - component: {fileID: 3882095121620384037}
   - component: {fileID: 2933241140387712963}
-  - component: {fileID: 8434656868569282787}
+  - component: {fileID: 6613301931623091665}
   m_Layer: 0
   m_Name: Asteroid Big
   m_TagString: Asteroid
@@ -119,9 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264e2d71dd19ab047b44c9925aaab2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.5
   projectile: {fileID: 400407001849189798, guid: ed0c96cfab6fcb447b96081c1370935e, type: 3}
---- !u!54 &8434656868569282787
+  direction: 0
+--- !u!54 &6613301931623091665
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +145,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
