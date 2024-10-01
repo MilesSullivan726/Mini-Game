@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   projectile: {fileID: 400407001849189798, guid: ed0c96cfab6fcb447b96081c1370935e, type: 3}
-  direction: 0
+  pointValue: 2
 --- !u!54 &2661210526552462284
 Rigidbody:
   m_ObjectHideFlags: 0

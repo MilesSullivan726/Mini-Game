@@ -7,6 +7,7 @@ public class Asteroid : MonoBehaviour
     public float speed;
     private Rigidbody Rigidbody;
     public GameObject projectile;
+    public int pointValue;
 
     void Start()
     {
@@ -23,5 +24,14 @@ public class Asteroid : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Projectile")
+        {
+            GameObject.Find("PointsTracker").GetComponent<PointsTracker>().UpdatePoints(pointValue);
+        }
+	}
+
+
+
 }
