@@ -8,23 +8,11 @@ public class PointsTracker : MonoBehaviour
     public int totalPoints = 0;
     public TextMeshProUGUI pointsText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void UpdatePoints(int points)
     {
-       
+        //when method is called, add points amount to total and display new value
         totalPoints += points;
-        Debug.Log(totalPoints);
 		pointsText.text = "Points: " + totalPoints.ToString();
 	}
 }

@@ -8,21 +8,10 @@ public class GameOverPoints : MonoBehaviour
 	public int finalPoints;
 	public TextMeshProUGUI pointsText;
 
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 	public void FinalPoints()
 	{
-
+		//find points tracker object and get the final points to display
 		finalPoints = GameObject.Find("PointsTracker").GetComponent<PointsTracker>().totalPoints;
 		pointsText.text = "Game Over! \n Points: " + finalPoints.ToString();
 	}

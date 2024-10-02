@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
+    //NOTE: This script is for top and bottom spawners
+
+
     public GameObject[] asteroidPrefabs;
     public float spawnRangeXLeft;
     public float spawnRangeXRight;
     public float spawnPosZ;
     private float startDelay = 2;
-    private float spawnInterval = 3f;
-
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //randomly spawn animals on timer
+        //randomly spawn asteroids on timer
         InvokeRepeating("SpawnRandomAsteroid", startDelay, Random.Range(2, 4));
     }
 

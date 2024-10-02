@@ -9,15 +9,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     public GameObject prefab;
-    private Rigidbody Rigidbody;
     public GameObject gameOver;
     private float lastShot = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Rigidbody = GetComponent<Rigidbody>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -52,7 +45,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, -6.1f);
         }
 
-        //fire projectile
+        //fire projectile if spacebar pressed and a shot hasn't been fired in 0.3 sec
         if (Input.GetKeyDown(KeyCode.Space) && Time.time - lastShot >= 0.3f){
             lastShot = Time.time;    
             Instantiate(prefab, transform.position, transform.localRotation);
@@ -61,12 +54,11 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-       // Debug.Log("triggered");
+      
         if (other.gameObject.tag == "Asteroid")
         {
-            //Debug.Log("Detected Projectile");
             Destroy(gameObject);
-            //Debug.Log("Game Over");
+            //display game over screen and end game
             gameOver.SetActive(true);
 			GameObject.Find("Game Over Screen").GetComponent<GameOverPoints>().FinalPoints();
 			Time.timeScale = 0;

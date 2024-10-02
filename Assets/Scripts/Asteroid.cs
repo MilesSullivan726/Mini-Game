@@ -6,20 +6,18 @@ public class Asteroid : MonoBehaviour
 {
     public float speed;
     private Rigidbody Rigidbody;
-    public GameObject projectile;
     public int pointValue;
 
     void Start()
     {
-        gameObject.tag = "Asteroid";
+        //get rigidbody of asteroid
         Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        //Rigidbody.AddForce(Vector3.forward, ForceMode.Force);
+        //move asteroid forward
         Rigidbody.AddRelativeForce(Vector3.forward * speed);
         
     }
@@ -28,6 +26,7 @@ public class Asteroid : MonoBehaviour
     {
         if (other.gameObject.tag == "Projectile")
         {
+            //if this asteroid collides with a projectile, add the corresponding point value to the total points
             GameObject.Find("PointsTracker").GetComponent<PointsTracker>().UpdatePoints(pointValue);
         }
 	}

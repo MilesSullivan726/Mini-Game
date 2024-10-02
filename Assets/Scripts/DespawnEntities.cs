@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class DespawnEntities : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //script catches any projectiles or asteroids that fly off-screen
 
     private void OnTriggerEnter(Collider other)
     {
